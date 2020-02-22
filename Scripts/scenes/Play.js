@@ -27,80 +27,109 @@ var scenes;
         // PUBLIC METHODS
         //initialize and instatiate
         Play.prototype.Start = function () {
-            this.test = new objects.Button(config.Game.ASSETS.getResult("dice1"), 20, 20, false);
+            this.test = new objects.Button(config.Game.ASSETS.getResult("dice1"), 100, 100, false);
             this._rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 320, 430, true);
             this.Main();
         };
         Play.prototype.Update = function () {
-            this.removeAllChildren(); //reset the dice
             this.addChild(this._rollButton);
         };
         Play.prototype.Main = function () {
             var _this = this;
             this.addChild(this._rollButton);
-            this.addChild(this.test);
             this._rollButton.on("click", function () {
                 //rollfunction
-                _this.Update();
-                _this._dice1 = new objects.Button(config.Game.ASSETS.getResult("dice1"), 0, 0, false);
-                _this.addChild(_this._dice1);
+                _this.removeAllChildren(); //reset the dice
+                _this.addChild(_this._rollButton);
                 console.log("in the click function");
-                //this.roll1();
-                //this.roll2();              
+                _this.roll1();
+                _this.roll2();
             });
         };
         Play.prototype.roll1 = function () {
             var tempR;
+            tempR = Math.floor(util.Mathf.RandomRange(1, 6));
+            //console.log(tempR);
             switch (tempR) {
                 case 1:
                     //dice 1 roll 1
-                    this._dice1 = new objects.Button(config.Game.ASSETS.getResult("dice1"), 150, 200, false);
-                    return tempR;
+                    this._dice1 = new objects.Button(config.Game.ASSETS.getResult("dice1"), 100, 100, false);
+                    this.addChild(this._dice1);
+                    this._label1 = new objects.Label("1", "20px", "aerial", "#000000", 190, 320);
+                    this.addChild(this._label1);
                     break;
                 case 2:
-                    return tempR;
-                    break;
-                case 2:
-                    return tempR;
+                    this._dice1 = new objects.Button(config.Game.ASSETS.getResult("dice2"), 100, 100, false);
+                    this.addChild(this._dice1);
+                    this._label1 = new objects.Label("2", "20px", "aerial", "#000000", 190, 320);
+                    this.addChild(this._label1);
                     break;
                 case 3:
-                    return tempR;
+                    this._dice1 = new objects.Button(config.Game.ASSETS.getResult("dice3"), 100, 100, false);
+                    this.addChild(this._dice1);
+                    this._label1 = new objects.Label("3", "20px", "aerial", "#000000", 190, 320);
+                    this.addChild(this._label1);
                     break;
                 case 4:
-                    return tempR;
+                    this._dice1 = new objects.Button(config.Game.ASSETS.getResult("dice4"), 100, 100, false);
+                    this.addChild(this._dice1);
+                    this._label1 = new objects.Label("4", "20px", "aerial", "#000000", 190, 320);
+                    this.addChild(this._label1);
                     break;
                 case 5:
-                    return tempR;
+                    this._dice1 = new objects.Button(config.Game.ASSETS.getResult("dice5"), 100, 100, false);
+                    this.addChild(this._dice1);
+                    this._label1 = new objects.Label("5", "20px", "aerial", "#000000", 190, 320);
+                    this.addChild(this._label1);
                     break;
                 case 6:
-                    return tempR;
+                    this._dice1 = new objects.Button(config.Game.ASSETS.getResult("dice6"), 100, 100, false);
+                    this.addChild(this._dice1);
+                    this._label1 = new objects.Label("1", "20px", "aerial", "#000000", 190, 320);
+                    this.addChild(this._label1);
                     break;
             }
         };
         Play.prototype.roll2 = function () {
             var tempR;
+            tempR = Math.floor(util.Mathf.RandomRange(1, 6));
             switch (tempR) {
                 case 1:
                     //dice 2 roll 1
-                    return tempR;
+                    this._dice2 = new objects.Button(config.Game.ASSETS.getResult("dice1"), 320, 100, false);
+                    this.addChild(this._dice2);
+                    this._label2 = new objects.Label("1", "20px", "aerial", "#000000", 420, 320);
+                    this.addChild(this._label2);
                     break;
                 case 2:
-                    return tempR;
-                    break;
-                case 2:
-                    return tempR;
+                    this._dice2 = new objects.Button(config.Game.ASSETS.getResult("dice2"), 320, 100, false);
+                    this.addChild(this._dice2);
+                    this._label2 = new objects.Label("2", "20px", "aerial", "#000000", 420, 320);
+                    this.addChild(this._label2);
                     break;
                 case 3:
-                    return tempR;
+                    this._dice2 = new objects.Button(config.Game.ASSETS.getResult("dice3"), 320, 100, false);
+                    this.addChild(this._dice2);
+                    this._label2 = new objects.Label("3", "20px", "aerial", "#000000", 420, 320);
+                    this.addChild(this._label2);
                     break;
                 case 4:
-                    return tempR;
+                    this._dice2 = new objects.Button(config.Game.ASSETS.getResult("dice4"), 320, 100, false);
+                    this.addChild(this._dice2);
+                    this._label2 = new objects.Label("4", "20px", "aerial", "#000000", 420, 320);
+                    this.addChild(this._label2);
                     break;
                 case 5:
-                    return tempR;
+                    this._dice2 = new objects.Button(config.Game.ASSETS.getResult("dice5"), 320, 100, false);
+                    this.addChild(this._dice2);
+                    this._label2 = new objects.Label("5", "20px", "aerial", "#000000", 420, 320);
+                    this.addChild(this._label2);
                     break;
                 case 6:
-                    return tempR;
+                    this._dice2 = new objects.Button(config.Game.ASSETS.getResult("dice6"), 320, 100, false);
+                    this.addChild(this._dice2);
+                    this._label2 = new objects.Label("6 ", "20px", "aerial", "#000000", 420, 320);
+                    this.addChild(this._label2);
                     break;
             }
         };
