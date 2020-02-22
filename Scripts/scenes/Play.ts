@@ -1,5 +1,9 @@
 module scenes
 {
+    /*
+    This game is made by Gan Xi Ye for COMP397 Midterm Feburary, 20, 2020
+    This is a simple dice roll game
+    */ 
     export class Play extends objects.Scene
     {
         // PRIVATE INSTANCE MEMBERS
