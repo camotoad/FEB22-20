@@ -1,2 +1,3 @@
-# FEB22-20
- Web Game Dice Roll
+# COMP397-W2020-Test-Template-v2
+
+## Test template for COMP397 to be  used with Midterm test
