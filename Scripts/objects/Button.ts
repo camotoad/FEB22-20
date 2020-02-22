@@ -7,10 +7,12 @@ module objects
         constructor(imagePath:Object = config.Game.ASSETS.getResult("button")
             , x:number = 0, y:number= 0, isCentered:boolean = false)
         {
-            super(imagePath, x, y, isCentered);
-
-            this.on("mouseover", this.MouseOver);
-            this.on("mouseout", this.MouseOut);
+            super(imagePath, x, y, isCentered); // putting this here so dice game isnt transparent on hover
+            if (isCentered)
+            {
+                this.on("mouseover", this.MouseOver);
+                this.on("mouseout", this.MouseOut);
+            }
 
             this.Start();
         }
