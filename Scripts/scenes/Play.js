@@ -15,7 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 var scenes;
 (function (scenes) {
     /*
-    This game is made by Gan Xi Ye for COMP397 Midterm Feburary, 20, 2020
+    This game is made by Gan Xi Ye for COMP397 Midterm Feburary, 22, 2020
     This is a simple dice roll game
     */
     var Play = /** @class */ (function (_super) {
