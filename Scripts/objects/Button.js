@@ -23,8 +23,11 @@ var objects;
             if (y === void 0) { y = 0; }
             if (isCentered === void 0) { isCentered = false; }
             var _this = _super.call(this, imagePath, x, y, isCentered) || this;
-            _this.on("mouseover", _this.MouseOver);
-            _this.on("mouseout", _this.MouseOut);
+            if (isCentered) // putting this here so dice game isnt transparent on hover
+             {
+                _this.on("mouseover", _this.MouseOver);
+                _this.on("mouseout", _this.MouseOut);
+            }
             _this.Start();
             return _this;
         }

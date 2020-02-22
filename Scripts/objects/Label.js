@@ -18,7 +18,7 @@ var objects;
         __extends(Label, _super);
         // constructor
         function Label(labelString, fontSize, fontFamily, fontColour, x, y, isCentered) {
-            if (labelString === void 0) { labelString = "empty label"; }
+            if (labelString === void 0) { labelString = ""; }
             if (fontSize === void 0) { fontSize = "12px"; }
             if (fontFamily === void 0) { fontFamily = "Consolas"; }
             if (fontColour === void 0) { fontColour = "#000000"; }

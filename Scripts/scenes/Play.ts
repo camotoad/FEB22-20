@@ -10,6 +10,7 @@ module scenes
         private _label2:objects.Label;
         private _dice1: objects.Button;
         private _dice2: objects.Button;
+        private test:objects.Button;
 
         // PUBLIC PROPERTIES
 
@@ -28,7 +29,7 @@ module scenes
         //initialize and instatiate
         public Start(): void 
         {
-            
+            this.test = new objects.Button(config.Game.ASSETS.getResult("dice1"), 20 , 20 ,false);
 
             this._rollButton = new objects.Button(config.Game.ASSETS.getResult("rollButton"), 320, 430, true);
             
@@ -44,12 +45,16 @@ module scenes
         public Main(): void 
         {
             this.addChild(this._rollButton);
+            
+
+            this.addChild(this.test);
 
             this._rollButton.on("click", ()=>{
                 //rollfunction
                 this.Update();
-                this._dice1 = new objects.Button(config.Game.ASSETS.getResult("dice1"), 150,200, false);
+                this._dice1 = new objects.Button(config.Game.ASSETS.getResult("dice1"), 0,0, false);
                 this.addChild(this._dice1);
+                console.log("in the click function");
                 //this.roll1();
                 //this.roll2();              
             });
